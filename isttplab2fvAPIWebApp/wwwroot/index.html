@@ -1,0 +1,46 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Informatics-2024-Lab2 Factory</title>
+    <link rel="stylesheet" href="css/site.css" />
+</head>
+<body>
+    <h1>Informatics-2024-Lab2 Factory</h1>
+    <h3>Add Factory</h3>
+    <form action="javascript:void(0);" method="POST" onsubmit="addFactory()">
+        <input type="text" id="add-adress" placeholder="New Factory Address">
+        <input type="text" id="add-maintenance" placeholder="New Maintenance">
+        <input type="text" id="add-factoryName" placeholder="New Factory Name">
+        <input type="submit" value="Add">
+    </form>
+
+    <div id="editFactory">
+        <h3>Edit</h3>
+        <form action="javascript:void(0);" onsubmit="updateFactory()">
+            <input type="hidden" id="edit-id">
+            <input type="text" id="edit-adress">
+            <input type="text" id="edit-maintenance">
+            <input type="text" id="edit-factoryName">
+            <input type="submit" value="Save">
+            <a onclick="closeInput()" aria-label="Close">&#10006;</a>
+        </form>
+    </div>
+
+    <p id="counter"></p>
+
+    <table>
+        <tr>
+            <th>Address</th>
+            <th>Maintenance</th>
+            <th>Factory Name</th>
+        </tr>
+        <tbody id="factories"></tbody>
+    </table>
+
+    <script src="js/lab2.js" asp-append-version="true"></script>
+    <script type="text/javascript">
+        getFactories();
+    </script>
+</body>
+</html>
